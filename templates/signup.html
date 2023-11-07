@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block body %}
+    <div class="signupbox">
+        <h1 style="padding-left: 550px;">Create an Account on Cybbit</h1>
+        {% if error %}
+                <div class="alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+        <div class="form-box">
+            <form method="POST" action="{% url 'signupuser' %}">
+                {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username : </label><br>
+                <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Choose a username" required>
+                <br><small>Your username must be unique. We'll let you know if someone has taken it already.</small>
+            </div><br><br>
+            <div class="form-group">
+                <label for="password1">Password : </label><br>
+                <input type="password" name="password1" class="form-control" id="password1" placeholder="Choose a password" required>
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password : </label><br>
+                <input type="password" name="password2" class="form-control" id="password2" placeholder="Confirm the password" required>
+            </div>
+            <button type="submit" class="btn-signup">Sign Up</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}

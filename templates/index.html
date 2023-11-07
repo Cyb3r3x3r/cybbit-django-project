@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<table>
+    <tr>
+        <th style="width:70%;border:4px solid black;height:100%;">
+            <div class="contentbox">
+                <center><h1>A Place for you<br>to share things<br> with the world.
+                </h1></center>
+            </div>
+        </th>
+        <th style="width:30%;border:4px solid black;height:100%;">
+            <div class="authbox">
+                {% if error %}
+                <div class="alert-danger" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+                <div style="margin:15px 15px;">
+                    {%if user.is_anonymous %}
+                    <h2>Log in to Cybbit</h2>
+                    <form method="POST" action="{% url 'loginuser' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <small>Don't have an account.<a href="/signup/">Create an account now.</a></small>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <div class="authuser">
+                    <p style="padding: 35px 15px;">Hello , <strong>{{ request.user }}</strong></p>
+                    <form method="POST" action="{% url 'logoutuser' %}">
+                        {% csrf_token %}
+                        <button class="btn" type="submit">Logout</button>
+                    </form>
+                </div>
+                {% endif %}
+                </div>
+            </div>
+        </th>
+    </tr>
+</table>
+{% endblock body %}
