@@ -1,0 +1,148 @@
+body {
+    background-color: bisque;
+}
+.form-box {
+    position: relative;
+    margin: 20px 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    border: 3px solid #333;
+    width: 50%;
+    background-color: bisque;
+    color: #333;
+}
+.signupbox{
+    margin-top: 5px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: brown;
+    color: aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.titlebox{
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: brown;
+    color: aliceblue;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    text-shadow: 2px 2px 4px black;
+}
+table{
+    width: 100%;
+    background-color: lightcoral;
+}
+.authbox{
+    align-content: center;
+}
+.form-control{
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 400px;
+}
+.form-text {
+    color: gainsboro;
+}
+.btn-signup {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 120px;
+    height: 50px;
+    background-color: #333; 
+    color: aliceblue; 
+    border: 2px 2px 4px aliceblue;
+    border-radius: 15px 15px;
+}
+.btn {
+    cursor: pointer;
+    margin: 16px 32px;
+    padding: 5px 5px;
+    width: 120px;
+    height: 50px;
+    background-color: #333; 
+    color: aliceblue; 
+    border: 2px 2px 4px aliceblue;
+    border-radius: 15px 15px;
+}
+.btn-signup:hover {
+    background-color: brown;
+}
+  
+.btn:hover {
+    background-color: brown;
+}
+.alert-danger {
+    background-color: lightblue;
+    color: red;
+}
+.container {
+    background-color: bisque;
+    margin: 30px;
+    padding:20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid #333;
+}
+.postform{
+    color: #333;
+    font-size: large;
+}
+.authuser {
+    background-color: firebrick;
+    color: azure;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
+    height: 200px;
+    border-radius: 10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #111;
+}
+.postbox{
+    background-image: linear-gradient(to right,#333,gray);
+    margin-top:10px;
+    padding: 10px 10px;
+    color:bisque;
+}
+.postbox div{
+    text-align: center;
+}
+.postbox div p{
+    padding: 50px 50px 50px 50px;
+    text-align: left;
+    text-justify:distribute;
+}
+.postlink{
+    display: inline-block;
+    color:bisque;
+    transition: 0.5s;
+}
+.postlink:hover{
+    color:yellow;
+    transform: scale(1.05);
+}
